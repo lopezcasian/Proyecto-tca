@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema de automatización de luz</title>
+	<meta charset="UTF-8">
+	<link rel=stylesheet href="../static/estilos.css" TYPE="text/css" MEDIA=screen>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet"> 
+</head>
+<body class="text-center">
+	<div class="todo">
+		<div class="container espacio">
+			<h3 class="titulos">Bienvenido a la configuración de iluminación del laboratorio D1</h3>
+			<div class="border border-dark rounded w-25">
+				<p class="letras">¿Movimiento? <label id="movimiento"></label></p>
+				<p class="letras">¿Luz natural? <label id="luzNatural"></label></p>
+			</div>
+		</div><!--Detecta movimiento-->
+
+		<div class="container espacio">
+			<h4 class="titulos">Estado actual del sistema:</h4>
+			<div class="border border-dark rounded w-25">
+				<p class="letras">Foco 1: <label id="estFoco1"></label></p>
+				<p class="letras">Foco 2: <label id="estFoco2"></label></p>
+			</div>
+		</div><!--Muestra el estado-->
+
+		<div class="container">
+			<div class="form-check form-check-inline">
+			  <label class="form-check-label">
+			    <input id="automatico" class="form-check-input" type="radio"><label class="letras">Control Automático</label>
+			  </label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <label class="form-check-label">
+			    <input id="manual" class="form-check-input" type="radio"><label class="letras">Control Manual</label>
+			  </label>
+			</div>
+
+			<div class="esto">
+				<div class="row align-items-center">
+				    <div class="col text-right">  
+						<label>Foco 1</label>
+					</div>
+					<div class="col text-left">
+					    <label class="switch">
+						  <input id="foco1" type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+					<div class="col text-right">
+					      <label>Foco 2</label>
+					</div>
+					<div class="col text-left">
+					      <label class="switch">
+						  <input id="foco2" type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+			    </div>
+			</div>
+		</div><!--Controles-->
+	</div>
+</body>
+
+<script src="../static/jquery.js"></script>
+<script src="../static/script.js"></script>
+<script>iniScript()</script>
+</html>
